@@ -14,7 +14,7 @@
 
 const average = (numbers) => {
   // Verifica array vazio:
-  if (numbers == 0) {
+  if (numbers.length === 0) {
     return undefined;
   }
 
@@ -22,9 +22,8 @@ const average = (numbers) => {
   for (let index = 0; index < numbers.length; index += 1) {
     if (typeof numbers[index] !== 'number') {
       return undefined;
-    } else {
-      sum += numbers[index] / numbers.length;
     }
+    sum += numbers[index] / numbers.length;
   }
 
   // Aplica arredondamento ao valor:
@@ -32,6 +31,7 @@ const average = (numbers) => {
   return round;
 };
 
+// Casos de testes:
 // console.log(average([2, 2]));
 // console.log(average([1, 1]));
 // console.log(average([1, '2']));
