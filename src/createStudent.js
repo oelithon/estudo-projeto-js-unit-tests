@@ -15,6 +15,16 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const createStudent = (nome) => {
+  const person = {
+    name: nome,
+    feedback: () => 'Eita pessoa boa!',
+  }
+  return person;
+};
+
+// Casos de testes:
+// console.log(createStudent('Elithon'));
+// Dúvidas no retorno do feedback;
 
 module.exports = createStudent;
