@@ -34,11 +34,15 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.strictEqual(circle(), undefined);
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
+    assert.strictEqual(parseFloat(circle(2).radius.toPrecision(4)), 2);
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    assert.strictEqual(circle(3).area.toPrecision(4), '28.26');
+    assert.strictEqual(parseFloat(circle(3).area.toPrecision(4)), 28.26);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
+    assert.strictEqual(parseFloat(circle(3).radius.toPrecision(4)), 3);
   });
 });
 
-// Como referência usei a documentação Number.prototype.toPrecision()
+// parseFloat analisa um argumento string, e retorna um numero de ponto flutuante. E o toPrecision retorna uma string que representa o valor do objeto Number com uma precisão específica. Nesse caso usei (4) para retornar um número com duas casas depois da virgula.
+// Como referência usei toPrecision() e parseFloat():
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
