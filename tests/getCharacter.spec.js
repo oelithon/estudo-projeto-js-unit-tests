@@ -51,6 +51,7 @@ describe('9 - Implemente os casos de teste da função `getCharacter`', () => {
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     assert.strictEqual(getCharacter(), undefined);
     // Teste se a função retorna o objeto correto para o parâmetro 'Arya',
+    
     // Teste se a função retorna o objeto correto para o parâmetro 'Brienne',
     // Teste se a função retorna o objeto correto para o parâmetro 'Melissandre',
     // Teste se a função se os parâmetros não são Case Sensitive.
